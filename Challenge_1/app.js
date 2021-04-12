@@ -5,7 +5,7 @@ const express = require('express'),
   cors = require('cors'),
   morgan = require('morgan'),
   mongoose = require('mongoose'),
-  { finalError } = require('./helper/errorHandler'),
+  { finalError } = require('./middlewares/errorHandler'),
   router = require('./routes');
 
 
