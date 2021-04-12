@@ -4,10 +4,6 @@ module.exports = {
     async Create(req, res) {
         try {
             const { name, description } = req.body;
-
-            const avail = await Blog.find({ name: name })
-            if (avail) throw new Error('Name Already Taken')
-
             const row = await Blog.create({ name, description });
 
             res.status(201).json({
